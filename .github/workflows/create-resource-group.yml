@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   terraform:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     env:
       ARM_USE_OIDC: true
