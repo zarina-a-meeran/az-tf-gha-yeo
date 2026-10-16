@@ -36,8 +36,11 @@ resource "azurerm_linux_virtual_machine" "example" {
     # username   = "azureuser"
     # public_key = file("/home/codespace/.ssh/gha_runner_key.pub")
 
-    username   = "azureuser"
+
+
+    username   = "adminuser"
     public_key = var.runner_ssh_public_key
+
   }
 }
 
