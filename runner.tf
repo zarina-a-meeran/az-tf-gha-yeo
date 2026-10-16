@@ -14,7 +14,7 @@ resource "azurerm_linux_virtual_machine" "example" {
   name                = var.runner_vm
   resource_group_name = azurerm_resource_group.learning.name
   location            = azurerm_resource_group.learning.location
-  size                = "Standard_D4_v5"
+  size                = "Standard_B2s"
   admin_username      = "adminuser"
   network_interface_ids = [
     azurerm_network_interface.learning.id,
