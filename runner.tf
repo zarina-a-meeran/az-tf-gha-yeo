@@ -14,7 +14,7 @@ resource "azurerm_linux_virtual_machine" "example" {
   name                = var.runner_vm
   resource_group_name = azurerm_resource_group.learning.name
   location            = azurerm_resource_group.learning.location
-  size                = "Standard_B2s"
+  size                = "Standard_D2nls_v6"
   admin_username      = "adminuser"
   network_interface_ids = [
     azurerm_network_interface.learning.id,
@@ -27,8 +27,8 @@ resource "azurerm_linux_virtual_machine" "example" {
 
   source_image_reference {
     publisher = "Canonical"
-    offer     = "0001-com-ubuntu-server-jammy"
-    sku       = "22_04-lts"
+    offer     = "ubuntu-24_04-lts"
+    sku       = "server"
     version   = "latest"
   }
 
